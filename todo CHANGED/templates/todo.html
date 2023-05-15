@@ -1,0 +1,47 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Tiro+Telugu&display=swap');
+    </style>
+  </head>
+<body bgcolor="yellowgreen">
+   <center><h1>Hello! here is your To-Do List</h1>
+
+    <form method="post" action="/todo">
+       <label for="task">Add a task:</label>
+        <input type="text" id="task" name="task">
+        <button type="submit">Add</button>
+    </form>
+
+    <ul>
+        {% for task in tasks %}
+        <p1> >> {{ task }} <a href="/delete_task/{{ loop.index0 }}">Done</a></p1><br>
+        {% endfor %}
+    </ul></center>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do List</title>
+</head>
+<body bgcolor="yellowgreen">
+   <center><h1>Hello! here is your To-Do List</h1>
+
+    <form method="post" action="/todo">
+       <label for="task">Add a task:</label>
+        <input type="text" id="task" name="task">
+        <button type="submit">Add</button>
+    </form>
+
+    <ul>
+        {% for task in tasks %}
+        <h3> >> {{ task }} <a href="/delete_task/{{ loop.index0 }}">Done</a> <a href="/update_task/{{ loop.index0 }}">Update</a><br></h3>
+        <!-- <h3> >> {{ task }} <a href="/update_task/{{ loop.index0 }}">Update</a><br></h3> -->
+        {% endfor %}
+    </ul></center>
+</body>
+</html>

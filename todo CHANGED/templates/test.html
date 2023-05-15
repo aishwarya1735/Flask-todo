@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Update Value</title>
+        <link rel="stylesheet" href="../static/style.css">
+    </head>
+    <body bgcolor="yellowgreen">
+        <center><h1>Enter update value</h1>
+        <form action="/update_task/{{todo}}" method="POST">
+            Value : &nbsp;&nbsp;<input type="text" name="new_value" id="w3" value="{{old_value}}" required><br><br>
+            
+           <h3> <button>submit</button></h3>
+
+        </form></center>
+        </body>
+</html>
